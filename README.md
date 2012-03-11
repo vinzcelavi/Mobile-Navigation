@@ -1,39 +1,47 @@
-MOBILE NAVIGATION (required jQuery)
+<h1>MOBILE NAVIGATION</h1>
 Transform your main navigation into a select object for mobile browsers.
 
 Lightweigth plugin: Less than 1KB !
 
-DEMO
+<h2>Demo</h2>
 
 http://www.celavi.fr/github/Mobile-Navigation
 
-USAGE
+<h2>Usage</h2>
 
-$('.menu').mobileNav({
-  maxWidth: 781,
-  classNav: 'mobile-nav',
-  idNav: 'mobile-nav',
-  container: $('.header'),
-  hasLabel: true,
-  label: 'Navigation',
-  classWrapper: 'wrapper-nav'
+Download jquery.mobileNav.pack.js (required jQuery) and add this line
+
+<code>
+$(document).ready(function(){
+  
+  $('.menu').mobileNav();
+  
 });
+</code>
 
-PARAMS
+You can also change the default Parameters
 
-maxWidth: apply the mobile navigation when browser width is less than this value (default 781px)
-classNav: class of the <select> navigation
-idNav: id of the <select> navigation
-container: element wrapping the <select> navigation
-hasLabel: if true prepend a label before the <select> nav and wrap both elements in a <div>, if false the is no label, and no wrapper
-label: text value of the label
-classWrapper: class of the <div> wrapping the label and the <select> nav
+<code>
+$(document).ready(function(){
 
-AUTHORS
+  $('.menu').mobileNav({
+    maxWidth: 781, // apply the mobile navigation when browser width is less than this value
+    classNav: 'mobile-nav', // class of the <select> navigation
+    idNav: 'mobile-nav', // id of the <select> navigation
+    container: $('.header'), // element wrapping the <select> navigation
+    hasLabel: true, // if true prepend a label before the <select> nav and wrap both elements in a <div>, if false the is no label, and no wrapper
+    label: 'Navigation', // text value of the label
+    classWrapper: 'wrapper-nav' // class of the <div> wrapping the label and the <select> nav
+  });
+
+});
+</code>
+
+<h2>Author</h2>
 
 Vincent Bianciotto
 www.celavi.fr
 
-COPYRIGHT AND LICENSE
+<h2>Copyright and licence</h2>
 
 Dual licensed under MIT and GPL.
