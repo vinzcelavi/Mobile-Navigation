@@ -1,0 +1,95 @@
+// ------------------------------------------------------------------------------------------------------------
+// 		VARS
+
+@blue: #00B1E6;
+@blue-light: #5cc5ed;
+
+
+// ------------------------------------------------------------------------------------------------------------
+//		STYLE
+
+html, body {
+	height: 100%;
+}
+
+body {
+	font-family: 'Helvetica', Arial, Sans-serif;
+	font-size: 13px;
+}
+
+a {
+  text-decoration: none;
+  color: @blue;
+}
+
+h1, h2, h3, h4 {
+	font-size: 40px;
+	font-weight: 300;
+	color: @blue;
+	margin-top: 50px;
+	margin-bottom: 30px;
+}
+
+.alert {
+  position: relative;
+  padding: 15px 30px;
+  margin-bottom: 18px;
+  text-shadow: 0 1px 0 #fff;
+  background-color: #f2dede;
+  border: 1px solid darken(#f2dede, 8%);
+  .border-radius(4px);
+  color: #b94a48;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 20px 10px;
+  clear: both;
+}
+
+p {
+  line-height: 22px;
+}
+
+.wrapper {
+	position: relative;
+	
+	.wrapper-nav {
+    margin: 0 10px;
+    
+    .label {
+      font-size: 16px;
+      margin-bottom: 3px;
+      display: block;
+    }
+	}
+	
+	.menu {
+    position: relative;
+    margin-top: 20px;
+    overflow: hidden;
+    
+    li {
+      position: relative;
+      display: block;
+      float: left;
+      margin-right: 20px;
+      
+      a {font-size: 22px; line-height: 30px;}
+    }
+	}
+	
+	.main {
+  	.section {
+  		position: relative;
+    	width: 100%;
+    	border-bottom: 1px solid #D8D8D8;
+    	padding-top: 120px;
+    	padding-bottom: 120px;
+    	overflow: hidden;
+    	text-shadow: 0 1px #FFF;
+  	}
+  }
+}
+
+.footer {
+	height: 150px; 
+}
