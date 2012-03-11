@@ -29,12 +29,12 @@ $(document).ready(function(){
 
   $('.menu').mobileNav({
     maxWidth: 781, // apply the mobile navigation when browser width is less than this value
-    classNav: 'mobile-nav', // class of the <select> navigation
-    idNav: 'mobile-nav', // id of the <select> navigation
-    container: $('.header'), // element wrapping the <select> navigation
-    hasLabel: true, // if true prepend a label before the <select> nav and wrap both elements in a <div>, if false the is no label, and no wrapper
+    classNav: 'mobile-nav', // class of the select navigation
+    idNav: 'mobile-nav', // id of the select navigation
+    container: $('.header'), // element wrapping the select navigation
+    hasLabel: true, // if true prepend a label before the select nav and wrap both elements in a <div>, if false the is no label, and no wrapper
     label: 'Navigation', // text value of the label
-    classWrapper: 'wrapper-nav' // class of the <div> wrapping the label and the <select> nav
+    classWrapper: 'wrapper-nav' // class of the <div> wrapping the label and the select nav
   });
 
 });
