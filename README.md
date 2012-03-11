@@ -1,4 +1,4 @@
-<h1>MOBILE NAVIGATION</h1>
+<h1>jQuery Mobile navigation</h1>
 Transform your main navigation into a select object for mobile browsers.
 
 Lightweigth plugin: Less than 1KB !
