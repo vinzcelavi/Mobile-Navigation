@@ -11,17 +11,20 @@ http://www.celavi.fr/github/Mobile-Navigation
 
 Download jquery.mobileNav.pack.js (required jQuery) and add this line
 
-<code>
+<div class="highlight">
+<pre>
 $(document).ready(function(){
   
   $('.menu').mobileNav();
   
 });
-</code>
+</pre>
+</div>
 
 You can also change the default Parameters
 
-<code>
+<div class="highlight">
+<pre>
 $(document).ready(function(){
 
   $('.menu').mobileNav({
@@ -35,7 +38,8 @@ $(document).ready(function(){
   });
 
 });
-</code>
+</pre>
+</div>
 
 <h2>Author</h2>
 
