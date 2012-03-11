@@ -11,20 +11,20 @@ http://www.celavi.fr/github/Mobile-Navigation
 
 Download jquery.mobileNav.pack.js (required jQuery) and add this line
 
-<div class="highlight">
 <pre>
+<code>
 $(document).ready(function(){
   
   $('.menu').mobileNav();
   
 });
+</code>
 </pre>
-</div>
 
 You can also change the default Parameters
 
-<div class="highlight">
 <pre>
+<code>
 $(document).ready(function(){
 
   $('.menu').mobileNav({
@@ -32,14 +32,14 @@ $(document).ready(function(){
     classNav: 'mobile-nav', // class of the select navigation
     idNav: 'mobile-nav', // id of the select navigation
     container: $('.header'), // element wrapping the select navigation
-    hasLabel: true, // if true prepend a label before the select nav and wrap both elements in a <div>, if false the is no label, and no wrapper
+    hasLabel: true, // if true prepend a label before the select nav and wrap both elements in a div, if false the is no label, and no wrapper
     label: 'Navigation', // text value of the label
-    classWrapper: 'wrapper-nav' // class of the <div> wrapping the label and the select nav
+    classWrapper: 'wrapper-nav' // class of the div wrapping the label and the select nav
   });
 
 });
+</code>
 </pre>
-</div>
 
 <h2>Author</h2>
 
