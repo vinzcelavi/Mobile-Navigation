@@ -1,15 +1,13 @@
 <h1>jQuery Mobile navigation</h1>
 Transform your main navigation into a select object for mobile browsers.
 
-Lightweigth plugin: Less than 1KB !
-
 <h2>Demo</h2>
 
 http://www.celavi.fr/github/Mobile-Navigation
 
-<h2>Usage</h2>
+<h2>JQuery</h2>
 
-Download jquery.mobileNav.pack.js (required jQuery) and add this line
+Download jquery.mobileNav.js (required jQuery)
 
 <pre>
 <code>
@@ -28,16 +26,34 @@ You can also change the default Parameters
 $(document).ready(function(){
 
   $('.menu').mobileNav({
-    maxWidth: 781, // apply the mobile navigation when browser width is less than this value
     classNav: 'mobile-nav', // class of the select navigation
     idNav: 'mobile-nav', // id of the select navigation
-    container: $('.header'), // element wrapping the select navigation
-    hasLabel: true, // if true prepend a label before the select nav and wrap both elements in a div, if false the is no label, and no wrapper
-    label: 'Navigation', // text value of the label
-    classWrapper: 'wrapper-nav' // class of the div wrapping the label and the select nav
+    container: $('.header nav'), // element wrapping the select navigation
+    label: 'Navigation', // text value on first option select nav
   });
 
 });
+</code>
+</pre>
+
+<h2>CSS</h2>
+
+Of course you can change the CSS for your consideration
+
+<pre>
+<code>
+    .mobile-nav {
+      display: none; /* hide the select nav by default */
+    }
+    
+    @media only screen and (max-width: 781px) {
+      .menu {display: none;} /* hide the main navigation */
+      .mobile-nav {display: block; min-width: 460px;} /* show the select navigation */
+    }
+    
+    @media only screen and (max-width: 481px) {
+      .mobile-nav {min-width: 320px;} /* change width for smaller screen */
+    }
 </code>
 </pre>
 

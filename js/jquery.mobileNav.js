@@ -11,49 +11,49 @@
   $.fn.mobileNav = function(options) {
   
     var defaults = {
-      maxWidth: 781,
       classNav: 'mobile-nav',
       idNav: 'mobile-nav',
-      container: $('.header'),
-      hasLabel: true,
+      container: $('.header nav'),
       label: 'Navigation',
-      classWrapper: 'wrapper-nav'
     };
     
     var options = $.extend(defaults, options);
- 
-    // Check document width
-  	if($(document).width() < options.maxWidth) {
-    	var nav = $(this);
-    	nav.hide();
-    	// Create <select> object
-      var selectNav = $('<select />', {id: options.idNav, class: options.classNav});
-    	
-    	// If has label create a wrapper
-    	if(options.hasLabel == true){
-       	var wrapperNav = $('<div />', {class: options.classWrapper});
-      	var label = $('<label />', {class: 'label', text: options.label});
-        wrapperNav.append(label).append(selectNav);
-        options.container.append(wrapperNav);
+  	var nav = $(this);
 
-      // Else if just append <select> to the container 
-    	}else if(options.hasLabel == false){
-      	options.container.append(selectNav);
-      }
+  	// Create <select> object
+    var selectNav = $('<select />', {id: options.idNav, class: options.classNav});
+  	
+    // Else if just append <select> to the container 
+  	options.container.append(selectNav);
 
-    	// Populate nav items in <select>
-    	nav.find('a').each(function(){
-        var text = $(this).text();
-        var value = $(this).attr('href');
-        
-        selectNav.append('<option value="'+value+'">'+text+'</option>');
-    	});
-    	
-    	// Actions on change <select>
-    	selectNav.change(function(){
+  	// Populate nav items in <select>
+  	nav.find('a').each(function(){
+      var textNav = $(this).text();
+      var valueNav = $(this).attr('href');
+      var optionNav = $('<option />', {
+        value: valueNav,
+        text: textNav
+      })
+      
+      selectNav.append(optionNav)
+  	});
+
+    // Prepend label  	
+  	selectNav.prepend('<option value="label">Navigation</option>');
+  	
+  	// Actions on change <select>
+  	selectNav.change(function(){
+      currentValue = $(this).attr('value');
+      
+      // Get window location on each option except for label
+      if(currentValue != 'label'){
         window.location = $(this).val();
-    	});
-    }
+        // Remove all selected attr on option children
+        $('option').removeAttr('selected');
+        // Set current option selected
+        $('option[value='+currentValue+']').attr('selected', 'selected');
+      }
+  	});
   
   };
 })(jQuery);
