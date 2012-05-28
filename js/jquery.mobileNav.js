@@ -14,7 +14,7 @@
       classNav: 'mobile-nav',
       idNav: 'mobile-nav',
       container: $('.header nav'),
-      label: 'Navigation',
+      label: 'Navigation'
     };
     
     var options = $.extend(defaults, options);
